@@ -1,0 +1,16 @@
+<!--นำค่าในตัวแปร posts ใน post-list.component.ts มาวนลูป-->
+<!--ดยใช้ ngIf เป็นตัวแสดงเงื่อนไขว่ามีข้อมูลหรือไม่-->
+<mat-accordion multi="true" *ngIf="posts.length > 0">
+  <!--ถ้ามีข้อมูลให้นำมาแสดงทั้งหมด โดยใช้ ngFor ค้นหาเป็นวังวนแล้วนำข้อมูลเก็บไว้ตัวแปร post-->
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+      <!--นำค่าใน title มาแสดง-->
+      {{ post.title }}
+    </mat-expansion-panel-header>
+    <!--นำค่าใน content มาแสดง-->
+    <p>{{ post.content }}</p>
+  </mat-expansion-panel>
+</mat-accordion>
+<!--ถ้าไม่มีข้อมูล-->
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0">No posts added yet</p>
+

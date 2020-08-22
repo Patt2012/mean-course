@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-form-field>
+    <!--รับค่าที่พิมพ์มาเก็บไว้ในตัวแปร enteredTitle-->
+    <input matInput type="text" [(ngModel)]="enteredTitle">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Comment Area</mat-label>
+    <!--รับค่าที่พิมพ์มาเก็บไว้ในตัวแปร enteredContent-->
+    <textarea matInput rows="6" [(ngModel)]="enteredContent"></textarea>
+  </mat-form-field>
+  <!--เมื่อกดปุ่มให้เรียกฟังชั่น onAddPost ที่อยู่ใน post-create.component.ts ทำงาน-->
+  <button mat-raised-button color="accent" (click)="onAddPost()">Save Post</button>
+</mat-card>
+

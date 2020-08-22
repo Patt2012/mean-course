@@ -1,0 +1,11 @@
+/*เฉพาะใน component นี้*/
+:host {
+  /*แสดงเป็นกรอบให้จัดระยะได้*/
+  display: block;
+  margin-top: 1rem;
+}
+
+.info-text {
+  text-align: center;
+}
+
