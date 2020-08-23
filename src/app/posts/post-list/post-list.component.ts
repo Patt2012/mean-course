@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { Post } from '../post.model';
+
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -14,6 +16,6 @@ export class PostListComponent {
   ]; */
   //รับค่าตัวแปรมาจาก post-create.component ส่งต่อให้กับตัวแปร posts
   //ตัวแปร posts เก็บค่าแบบอาร์เรย์
-  @Input() posts = [];
+  @Input() posts: Post[] = [];
 }
 
